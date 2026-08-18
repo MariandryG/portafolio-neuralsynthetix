@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="stylesheet" href="stylo.css">
+    <title>Portafolio NeuralSynthetix</title>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <span class="logo-text">NEURAL<span>SYNTHETIX</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#servicios">Soluciones</a></li>
+            <li><a href="#contacto" class="btn-nav">Contactar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Optimiza la Inteligencia Artificial de tu Empresa</h1>
+            <p>Diseñamos e implementamos paquetes de prompts de alto rendimiento para potenciar los modelos de IA corporativos.</p>
+            <a href="#contacto" class="btn-primary">Solicitar Consultoría</a>
+        </div>
+    </header>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Sintetizando el conocimiento humano para la IA</h3>
+                    <p>En <strong>NeuralSynthetix</strong> nos especializamos en la ingeniería de prompts avanzada. Transformamos requerimientos complejos en instrucciones precisas y estructuradas que maximizan el rendimiento, precisión y eficiencia de los modelos de lenguaje en el entorno empresarial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo que Hacemos / Soluciones -->
+    <section id="servicios" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Nuestras Soluciones</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fa-solid fa-brain card-icon"></i>
+                    <h3>Paquetes de Prompts Corporativos</h3>
+                    <p>Arquitecturas de instrucciones a medida preparadas para integrarse en tus flujos de trabajo clave.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-sliders card-icon"></i>
+                    <h3>Calibración y Optimización</h3>
+                    <p>Ajuste fino de prompts existentes para reducir alucinaciones de la IA y mejorar la precisión de respuesta.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-handshake card-icon"></i>
+                    <h3>Consultoría & Entrenamiento</h3>
+                    <p>Acompañamiento personalizado para capacitar a tus equipos en la formulación de prompts eficientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- SECCIÓN DE CONTACTO (FORMULARIO INTERACTIVO) -->
+<section id="contacto" class="section">
+    <div class="container">
+        <h2 class="section-title" data-lang="es">Hablemos de tu Proyecto</h2>
+        <h2 class="section-title" data-lang="en" style="display: none;">Let's Talk About Your Project</h2>
+    
+        <p class="section-subtitle" data-lang="es">Cada empresa tiene necesidades únicas. Contáctanos para diseñar la solución exacta que tu equipo necesita.</p>
+        <p class="section-subtitle" data-lang="en" style="display: none;">Every company has unique needs. Contact us to design the exact solution your team requires.</p>
+    
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Correo corporativo" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="empresa" name="empresa" placeholder="Empresa / Organización" required>
+            </div>
+            <div class="form-group">
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos brevemente sobre tus requerimientos..." required></textarea>
+            </div>
+            <!-- Botones de Envío -->
+            <div class="buttons-group">
+                <button type="button" id="btn-whatsapp" class="btn-primary btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-lang="es">Enviar por WhatsApp</span><span data-lang="en" style="display: none;">Send via WhatsApp</span>
+                </button>
+                <button type="button" id="btn-email" class="btn-primary btn-email">
+                    <i class="fa-solid fa-envelope"></i> <span data-lang="es">Enviar por Correo</span><span data-lang="en" style="display: none;">Send via Email</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER CON INFORMACIÓN DE CONTACTO DIRECTO Y REDES -->
+<footer class="contacto" id="footer-info">
+    <div class="footer-container">
+        <h3 class="footer-title" data-lang="es">Contacto Directo</h3>
+        <h3 class="footer-title" data-lang="en" style="display: none;">Direct Contact</h3>
+
+    <div class="contacto-info-grid">
+        <div class="contacto-linea" data-lang="es">
+            <p><strong>Correo: </strong></p>
+            <a href="mailto:mariandrygarcia78@gmail.com">neuralsynthetix@gmail.com</a>
+        </div>
+        <div class="contacto-linea" data-lang="en" style="display: none;">
+            <p><strong>Email: </strong></p>
+            <a href="mailto:neuralsynthetix@gmail.com">neuralsynthetix@gmail.com</a>
+        </div>
+
+        <div class="contacto-linea" data-lang="es">
+            <p><strong>Teléfono: </strong></p>
+            <a href="https://wa.me/584268467458" target="_blank" rel="noopener noreferrer">+58 426 8467 458</a>
+        </div>
+        <div class="contacto-linea" data-lang="en" style="display: none;">
+            <p><strong>Phone: </strong></p>
+            <a href="https://wa.me/584268467458" target="_blank" rel="noopener noreferrer">+58 426 8467 458</a>
+        </div>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="redes-contacto">
+        <a href="https://github.com/MariandryG" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+        <img src="./img/git.png" alt="GitHub"> GitHub
+        </a>
+        <a href="https://www.instagram.com/neuralsynthetix/?hl=es" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+        <img src="./img/instagram.png" alt="Instagram"> Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/mariandry-garcia-76b708344/" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+        <img src="./img/linkedin.png" alt="LinkedIn"> LinkedIn
+        </a>
+    </div>
+
+    <div class="footer-credits">
+        <p>&copy; 2026 NeuralSynthetix. All rights reserved. &lt;AD/MG&gt;</p>
+    </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
