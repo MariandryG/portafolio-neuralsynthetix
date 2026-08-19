@@ -590,3 +590,35 @@ footer.contacto {
 .btn-nav:hover {
     color: #cccccc;
 }
+
+/* Ajuste de navegación para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    /* Ajusta el espacio de la barra para que no se amontone */
+    .navbar {
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+
+    /* Reduce un poco el tamaño del logo en móviles si es necesario */
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    /* Convertimos el botón de volver en un ícono circular minimalista */
+    .btn-nav {
+        padding: 8px 12px !important;
+        font-size: 0; /* Oculta el texto dentro del botón */
+        border-radius: 50%; /* Lo hace circular */
+        width: 38px;
+        height: 38px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    /* Hacemos visible únicamente el ícono de la flecha */
+    .btn-nav i {
+        font-size: 1rem; /* Le devuelve el tamaño al ícono */
+    }
+}
