@@ -592,33 +592,47 @@ footer.contacto {
 }
 
 /* Ajuste de navegación para pantallas pequeñas (móviles) */
+/* Ajustes específicos para móviles */
 @media (max-width: 600px) {
-    /* Ajusta el espacio de la barra para que no se amontone */
     .navbar {
         padding: 10px 15px;
         justify-content: space-between;
     }
 
-    /* Reduce un poco el tamaño del logo en móviles si es necesario */
     .logo-text {
         font-size: 1.1rem;
     }
 
-    /* Convertimos el botón de volver en un ícono circular minimalista */
-    .btn-nav {
-        padding: 8px 12px !important;
-        font-size: 0; /* Oculta el texto dentro del botón */
-        border-radius: 50%; /* Lo hace circular */
-        width: 38px;
-        height: 38px;
-        display: flex !important;
+    /* ÚNICAMENTE el botón "Volver" de la barra de navegación se vuelve circular */
+    .navbar .btn-nav {
+        padding: 0 !important;
+        font-size: 0 !important; /* Oculta el texto de "Volver a Soluciones" */
+        border-radius: 50% !important;
+        width: 38px !important;
+        height: 38px !important;
+        display: inline-flex !important;
         align-items: center;
         justify-content: center;
-        white-space: nowrap;
+        flex-shrink: 0;
     }
 
-    /* Hacemos visible únicamente el ícono de la flecha */
-    .btn-nav i {
-        font-size: 1rem; /* Le devuelve el tamaño al ícono */
+    /* Le devuelves el tamaño solo al ícono de la flecha de la navbar */
+    .navbar .btn-nav i {
+        font-size: 1rem !important;
+    }
+
+    /* Ajuste para los botones del CTA abajo en pantallas chicas */
+    .cta-buttons-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn-cta-whatsapp,
+    .btn-cta-email {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
     }
 }
