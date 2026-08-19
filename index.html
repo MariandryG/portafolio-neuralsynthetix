@@ -9,17 +9,23 @@
     <title>Portafolio NeuralSynthetix</title>
 </head>
 <body>
-    <!-- Navegación -->
     <nav class="navbar">
         <div class="logo-container">
             <span class="logo-text">NEURAL<span>SYNTHETIX</span></span>
         </div>
-        <ul class="nav-links">
+
+        <!-- Menú de navegación con ID para el script -->
+        <ul class="nav-links" id="nav-menu">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#nosotros">Sobre Nosotros</a></li>
             <li><a href="#servicios">Soluciones</a></li>
             <li><a href="#contacto" class="btn-nav">Contactar</a></li>
         </ul>
+
+    <!-- Botón Hamburguesa para Móviles -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -31,7 +37,7 @@
         </div>
     </header>
 
-  <!-- Sobre Nosotros -->
+    <!-- Sobre Nosotros -->
 <section id="nosotros" class="section">
     <div class="container">
         <h2 class="section-title" data-lang="es">Sobre Nosotros</h2>

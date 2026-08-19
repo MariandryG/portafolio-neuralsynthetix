@@ -425,3 +425,44 @@ footer.contacto {
     color: var(--text-muted);
     line-height: 1.4;
 }
+
+/* Ocultar el botón hamburguesa en pantallas grandes */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- ADAPTACIÓN RESPONSIVE (PANTALLAS MÓVILES) --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar botón hamburguesa */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: -100%; /* Oculto fuera de pantalla por la izquierda */
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: rgba(13, 14, 18, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: left 0.4s ease;
+    }
+
+    /* Clase que se activa mediante JS */
+    .nav-links.active {
+        left: 0;
+    }
+}
