@@ -1,4 +1,6 @@
-/* Variables de Estilo basadas en la marca */
+/* ==========================================
+   1. VARIABLES GLOBALES & RESETEO
+   ========================================== */
 :root {
     --bg-main: #0d0e12;
     --bg-card: #161920;
@@ -7,12 +9,16 @@
     --text-muted: #a0a5b5;
     --silver-glow: rgba(192, 192, 192, 0.25);
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --navbar-height: 80px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -21,6 +27,12 @@ body {
     color: var(--text-white);
     font-family: var(--font-main);
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .container {
@@ -29,18 +41,35 @@ body {
     padding: 0 20px;
 }
 
-/* Navbar */
+/* ==========================================
+   2. NAVEGACIÓN (NAVBAR)
+   ========================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 0 40px;
+    height: var(--navbar-height);
     background-color: rgba(13, 14, 18, 0.95);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
 }
 
 .logo-text {
@@ -63,8 +92,7 @@ body {
 
 .nav-links a {
     color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -77,31 +105,88 @@ body {
     border-radius: 20px;
 }
 
-/* Hero Section */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-lang {
+    background: transparent;
+    border: 1px solid var(--border-metal);
+    color: var(--text-white);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.btn-lang:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==========================================
+   3. SECCIÓN HERO (INICIO)
+   ========================================== */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: radial-gradient(circle at center, rgba(30, 35, 45, 0.6) 0%, var(--bg-main) 70%);
-    padding: 0 20px;
+    padding: calc(var(--navbar-height) + 40px) 20px 60px;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--text-muted);
     max-width: 650px;
     margin: 0 auto 30px;
 }
 
-/* Botones principales */
+.hero-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.hero-logo-img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+}
+
+/* ==========================================
+   4. BOTONES Y COMPONENTES GENERALES
+   ========================================== */
 .btn-primary {
     display: inline-block;
     padding: 12px 32px;
@@ -109,7 +194,6 @@ body {
     color: var(--text-white);
     border: 2px solid var(--border-metal);
     border-radius: 30px;
-    text-decoration: none;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 0 15px var(--silver-glow);
@@ -122,7 +206,6 @@ body {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
 }
 
-/* Secciones generales */
 .section {
     padding: 100px 0;
 }
@@ -143,13 +226,25 @@ body {
     color: var(--text-muted);
     margin-bottom: 40px;
 }
-
-/* Tarjetas (Soluciones) */
+/* ==========================================
+   5. TARJETAS Y SOLUCIONES
+   ========================================== */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
+}
+
+/* Limpieza total de estilos por defecto de enlaces en las tarjetas */
+.card-link,
+.card-link:link,
+.card-link:visited,
+.card-link:hover,
+.card-link:active {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
 }
 
 .card {
@@ -158,12 +253,15 @@ body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
-    transition: transform 0.3s, border-color 0.3s;
+    height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--border-metal);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .card-icon {
@@ -173,15 +271,22 @@ body {
 }
 
 .card h3 {
+    color: var(--text-white) !important;
     margin-bottom: 15px;
+    font-size: 1.25rem;
+    text-decoration: none !important;
 }
 
 .card p {
-    color: var(--text-muted);
+    color: var(--text-muted) !important;
     font-size: 0.95rem;
+    line-height: 1.5;
+    text-decoration: none !important;
 }
 
-/* Formulario de Contacto */
+/* ==========================================
+   6. FORMULARIO DE CONTACTO
+   ========================================== */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -199,6 +304,8 @@ body {
     border-radius: 8px;
     color: var(--text-white);
     font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
@@ -207,16 +314,6 @@ body {
     border-color: var(--border-metal);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-/* Grupo de Botones de Contacto */
 .buttons-group {
     display: flex;
     gap: 15px;
@@ -232,7 +329,6 @@ footer {
     font-size: 0.95rem;
 }
 
-/* Botón WhatsApp */
 .btn-whatsapp {
     border-color: #25d366;
     color: #ffffff;
@@ -244,7 +340,6 @@ footer {
     box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
 }
 
-/* Botón Correo */
 .btn-email {
     border-color: var(--border-metal);
 }
@@ -255,7 +350,183 @@ footer {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* --- FOOTER Y CONTACTO DIRECTO --- */
+/* ==========================================
+   7. FOOTER Y REDES SOCIALES
+   ========================================== */
+footer {
+    background-color: var(--bg-main);
+    padding: 60px 20px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-title {
+    color: var(--text-white);
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.contacto-info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.contacto-linea {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.contacto-linea a {
+    color: var(--border-metal);
+    transition: color 0.3s ease;
+}
+
+.contacto-linea a:hover {
+    color: var(--text-white);
+}
+
+.redes-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.icono-contacto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.icono-contacto img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.icono-contacto:hover {
+    color: var(--text-white);
+}
+
+.footer-credits {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+}
+/* ==========================================
+   8. SECCIÓN SOBRE NOSOTROS Y EQUIPO
+   ========================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    color: var(--text-white);
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.team-container {
+    margin-top: 60px;
+}
+
+.team-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    color: var(--text-white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-metal);
+}
+
+.team-img-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border-metal);
+    box-shadow: 0 0 15px var(--silver-glow);
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-role {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--border-metal);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.team-info h4 {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin-bottom: 5px;
+}
+
+.team-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   9. FOOTER Y CONTACTO DIRECTO
+   ========================================== */
 footer.contacto {
     background-color: #0b0c0f;
     padding: 50px 20px 20px 20px;
@@ -297,15 +568,14 @@ footer.contacto {
 .contacto-linea a {
     color: var(--text-white);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .contacto-linea a:hover {
-    color: #a3a8b3;
+    color: var(--border-metal);
     text-decoration: underline;
 }
 
-/* Redes Sociales */
 .redes-contacto {
     display: flex;
     justify-content: center;
@@ -345,6 +615,49 @@ footer.contacto {
     color: var(--text-muted);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 20px;
+}
+
+/* ==========================================
+   10. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Controlado por JS al pulsar hamburguesa */
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background: var(--bg-main);
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .contacto-info-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 /* --- ESTILOS DEL EQUIPO (ABOUT US) --- */
@@ -436,22 +749,24 @@ footer.contacto {
     cursor: pointer;
 }
 
-/* --- ADAPTACIÓN RESPONSIVE (PANTALLAS MÓVILES) --- */
+/* ==========================================
+   10. ADAPTACIÓN RESPONSIVE (PANTALLAS MÓVILES)
+   ========================================== */
 @media (max-width: 768px) {
     .navbar {
-        padding: 15px 20px;
+        padding: 0 20px;
     }
 
     .menu-toggle {
-        display: block; /* Mostrar botón hamburguesa */
+        display: block; /* Mostrar botón hamburguesa en móviles */
     }
 
     .nav-links {
         position: fixed;
-        top: 60px;
-        left: -100%; /* Oculto fuera de pantalla por la izquierda */
+        top: var(--navbar-height);
+        left: -100%; /* Oculto fuera de pantalla a la izquierda */
         width: 100%;
-        height: calc(100vh - 60px);
+        height: calc(100vh - var(--navbar-height));
         background-color: rgba(13, 14, 18, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
@@ -459,18 +774,19 @@ footer.contacto {
         align-items: center;
         gap: 30px;
         transition: left 0.4s ease;
+        z-index: 999;
     }
 
-    /* Clase que se activa mediante JS */
+    /* Clase activa controlada por Javascript */
     .nav-links.active {
         left: 0;
     }
 }
 
 
-/*segunda pagina*/
-
-/* --- PAGINAS DETALLADAS DE SOLUCIONES --- */
+/* ==========================================
+   11. PÁGINAS DETALLADAS DE SOLUCIONES
+   ========================================== */
 .solution-detail-header {
     text-align: center;
     max-width: 800px;
@@ -551,7 +867,7 @@ footer.contacto {
 
 .solution-cta {
     text-align: center;
-    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 40px 20px;
@@ -576,23 +892,23 @@ footer.contacto {
     gap: 10px;
 }
 
-/* Quita el morado de enlaces visitados y el subrayado */
+/* ==========================================
+   12. BOTONES DE NAVEGACIÓN Y AJUSTES MÓVILES
+   ========================================== */
 .btn-nav, 
 .btn-nav:visited {
-    color: #ffffff;
+    color: var(--text-white);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    transition: color 0.3s ease;
 }
 
-/* Efecto al pasar el cursor por encima */
 .btn-nav:hover {
-    color: #cccccc;
+    color: var(--border-metal);
 }
 
-/* Ajuste de navegación para pantallas pequeñas (móviles) */
-/* Ajustes específicos para móviles */
 @media (max-width: 600px) {
     .navbar {
         padding: 10px 15px;
@@ -603,10 +919,10 @@ footer.contacto {
         font-size: 1.1rem;
     }
 
-    /* ÚNICAMENTE el botón "Volver" de la barra de navegación se vuelve circular */
+    /* Transformar el botón "Volver" en un botón circular solo con el icono */
     .navbar .btn-nav {
         padding: 0 !important;
-        font-size: 0 !important; /* Oculta el texto de "Volver a Soluciones" */
+        font-size: 0 !important;
         border-radius: 50% !important;
         width: 38px !important;
         height: 38px !important;
@@ -616,12 +932,10 @@ footer.contacto {
         flex-shrink: 0;
     }
 
-    /* Le devuelves el tamaño solo al ícono de la flecha de la navbar */
     .navbar .btn-nav i {
         font-size: 1rem !important;
     }
 
-    /* Ajuste para los botones del CTA abajo en pantallas chicas */
     .cta-buttons-group {
         flex-direction: column;
         width: 100%;
@@ -634,5 +948,218 @@ footer.contacto {
         text-align: center;
         justify-content: center;
         box-sizing: border-box;
+    }
+}
+
+/* ==========================================
+   13. SECCIÓN PROTOTIPOS Y PROYECTOS (PORTAFOLIO)
+   ========================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-metal);
+    box-shadow: 0 10px 25px var(--silver-glow);
+}
+
+.project-img-wrapper {
+    width: 100%;
+    height: 220px;
+    background-color: var(--bg-main);
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.04);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+/* ==========================================
+   14. ESTILOS FINALES DE LOGOS Y MULTIMEDIA
+   ========================================== */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Logo circular en el Navbar */
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Wrapper y Logo Circular en la sección Hero */
+.hero-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-logo-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.2));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.18);
+}
+
+/* Wrapper para imágenes generales dentro de Tarjetas */
+.card-image-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-img, 
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ==========================================
+   15. REGLAS COMPLEMENTARIAS Y MEDIA QUERIES
+   ========================================== */
+.btn-lang {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-white);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-lang:hover {
+    border-color: var(--border-metal);
+    color: var(--text-white);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 32px;
+    }
+
+    .project-img-wrapper {
+        height: 180px;
+    }
+}
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre los dos botones */
+}
+
+/* --- Ajustes Responsivos para Navbar en Móviles --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.7rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Reducir el tamaño del texto del logo y espacio con el ícono */
+    .logo-container {
+        gap: 6px;
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Reduce el tamaño del título */
+        white-space: nowrap;
+    }
+
+    .logo-img {
+        width: 32px; /* Tamaño controlado para la imagen del logo */
+        height: auto;
+    }
+
+    /* Separación interna de las acciones de navegación */
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Separación clara entre el botón EN/ES y la hamburguesa */
+    }
+
+    /* Botón de idioma más compacto */
+    .btn-lang {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+
+    .menu-toggle {
+        font-size: 1.2rem;
+        padding: 4px;
+    }
+}
+
+/* Pantallas extra pequeñas (teléfonos estrechos < 400px) */
+@media (max-width: 400px) {
+    .logo-text {
+        font-size: 0.88rem;
+    }
+    
+    .logo-text span {
+        display: inline-block; /* Mantiene ambas palabras juntas o bien alineadas */
+    }
+
+    .nav-actions {
+        gap: 6px;
     }
 }

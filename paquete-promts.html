@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paquetes de Prompts Corporativos | NeuralSynthetix</title>
-    <link rel="stylesheet" href="./stylo.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="stylo.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -16,9 +16,16 @@
         <div class="logo-container">
             <a href="index.html" class="logo-text">NEURAL<span>SYNTHETIX</span></a>
         </div>
-        <a href="index.html#servicios" class="btn-nav">
-            <i class="fa-solid fa-arrow-left"></i> Volver a Soluciones
-        </a>
+        <div class="nav-controls">
+            <a href="index.html#servicios" class="btn-nav">
+                <i class="fa-solid fa-arrow-left"></i> 
+                <span data-es="Volver a Soluciones" data-en="Back to Solutions">Volver a Soluciones</span>
+            </a>
+            <!-- Botón de cambio de idioma -->
+            <button id="btn-lang" class="btn-lang">
+                <i class="fa-solid fa-globe"></i> <span id="lang-text">EN</span>
+            </button>
+        </div>
     </nav>
 
     <!-- Contenido Principal -->
@@ -26,53 +33,155 @@
         
         <!-- Encabezado -->
         <div class="solution-detail-header">
-            <span class="solution-badge">Solución 01</span>
-            <h1>Paquetes de Prompts Corporativos</h1>
-            <p class="lead">Arquitecturas de instrucciones a medida, diseñadas para integrarse sin problemas en los flujos de trabajo clave de tu empresa.</p>
+            <span class="solution-badge" data-es="Solución 02" data-en="Solution 02">Solución 02</span>
+            <h1 data-es="Paquetes de Prompts Corporativos" data-en="Corporate Prompt Packages">Paquetes de Prompts Corporativos</h1>
+            <p class="lead" data-es="Arquitecturas de instrucciones a medida, diseñadas para integrarse sin problemas en los flujos de trabajo clave de tu empresa." data-en="Tailored instruction architectures, designed to seamlessly integrate into your company's key workflows.">Arquitecturas de instrucciones a medida, diseñadas para integrarse sin problemas en los flujos de trabajo clave de tu empresa.</p>
         </div>
 
         <!-- Rejilla de Información -->
         <div class="solution-grid">
             
             <div class="detail-card">
-                <h3><i class="fa-solid fa-layer-group"></i> ¿Qué incluye este paquete?</h3>
+                <h3><i class="fa-solid fa-layer-group"></i> <span data-es="¿Qué incluye este paquete?" data-en="What does this package include?">¿Qué incluye este paquete?</span></h3>
                 <ul class="detail-list">
-                    <li><strong>System Prompts Estandarizados:</strong> Instrucciones base de alto nivel para garantizar alineación con la voz y políticas corporativas.</li>
-                    <li><strong>Formatos Estructurados:</strong> Salidas garantizadas en JSON, Markdown o YAML listos para ser consumidos por tus sistemas/APIs.</li>
-                    <li><strong>Manejo de Casos Borde:</strong> Protocolos de resguardo (fallbacks) ante entradas ambiguas, fuera de contexto o inesperadas.</li>
-                    <li><strong>Documentación Técnica:</strong> Guía clara con los parámetros recomendados (*temperature, top_p, max_tokens*).</li>
+                    <li>
+                        <strong data-es="System Prompts Estandarizados:" data-en="Standardized System Prompts:">System Prompts Estandarizados:</strong> 
+                        <span data-es="Instrucciones base de alto nivel para garantizar alineación con la voz y políticas corporativas." data-en="High-level base instructions to guarantee alignment with corporate voice and policies.">Instrucciones base de alto nivel para garantizar alineación con la voz y políticas corporativas.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Formatos Estructurados:" data-en="Structured Formats:">Formatos Estructurados:</strong> 
+                        <span data-es="Salidas garantizadas en JSON, Markdown o YAML listos para ser consumidos por tus sistemas/APIs." data-en="Guaranteed outputs in JSON, Markdown, or YAML ready to be consumed by your systems/APIs.">Salidas garantizadas en JSON, Markdown o YAML listos para ser consumidos por tus sistemas/APIs.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Manejo de Casos Borde:" data-en="Edge Case Handling:">Manejo de Casos Borde:</strong> 
+                        <span data-es="Protocolos de resguardo (fallbacks) ante entradas ambiguas, fuera de contexto o inesperadas." data-en="Fallback protocols for ambiguous, out-of-context, or unexpected inputs.">Protocolos de resguardo (fallbacks) ante entradas ambiguas, fuera de contexto o inesperadas.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Documentación Técnica:" data-en="Technical Documentation:">Documentación Técnica:</strong> 
+                        <span data-es="Guía clara con los parámetros recomendados (temperature, top_p, max_tokens)." data-en="Clear guide with recommended parameters (temperature, top_p, max_tokens).">Guía clara con los parámetros recomendados (temperature, top_p, max_tokens).</span>
+                    </li>
                 </ul>
             </div>
 
             <div class="detail-card">
-                <h3><i class="fa-solid fa-chart-line"></i> Beneficios Directos</h3>
+                <h3><i class="fa-solid fa-chart-line"></i> <span data-es="Beneficios Directos" data-en="Direct Benefits">Beneficios Directos</span></h3>
                 <ul class="detail-list">
-                    <li><strong>Eficiencia en Consumo de Tokens:</strong> Estructuras optimizadas para reducir costos de procesamiento por llamada.</li>
-                    <li><strong>Respuestas Consistentes:</strong> Eliminación de variaciones drásticas en las respuestas del modelo.</li>
-                    <li><strong>Fácil Integración:</strong> Listos para usar en plataformas como OpenAI API, Anthropic, LangChain o herramientas internas.</li>
+                    <li>
+                        <strong data-es="Eficiencia en Consumo de Tokens:" data-en="Token Efficiency:">Eficiencia en Consumo de Tokens:</strong> 
+                        <span data-es="Estructuras optimizadas para reducir costos de procesamiento por llamada." data-en="Optimized structures to reduce processing costs per API call.">Estructuras optimizadas para reducir costos de procesamiento por llamada.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Respuestas Consistentes:" data-en="Consistent Responses:">Respuestas Consistentes:</strong> 
+                        <span data-es="Eliminación de variaciones drásticas en las respuestas del modelo." data-en="Elimination of drastic variations in model responses.">Eliminación de variaciones drásticas en las respuestas del modelo.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Fácil Integración:" data-en="Easy Integration:">Fácil Integración:</strong> 
+                        <span data-es="Listos para usar en plataformas como OpenAI API, Anthropic, LangChain o herramientas internas." data-en="Ready to use on platforms like OpenAI API, Anthropic, LangChain, or internal tools.">Listos para usar en plataformas como OpenAI API, Anthropic, LangChain o herramientas internas.</span>
+                    </li>
                 </ul>
             </div>
 
         </div>
 
-        <!-- Llamado a la Acción -->
-<div class="solution-cta">
-    <h3>¿Necesitas una arquitectura de prompts para tu proyecto?</h3>
-    <p>Diseñamos un paquete adaptado a la infraestructura y requerimientos de tu equipo.</p>
+        <!-- Galería de Estructuras y Plantillas -->
+        <section class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title" data-es="Estructura & Galería de Plantillas" data-en="Structure & Template Gallery">Estructura & Galería de Plantillas</h2>
+                <p class="section-subtitle" data-es="Explora la arquitectura modular y los formatos estandarizados incluidos en nuestras soluciones de prompts." data-en="Explore the modular architecture and standardized formats included in our prompt solutions.">Explora la arquitectura modular y los formatos estandarizados incluidos en nuestras soluciones de prompts.</p>
 
-    <!-- Grupo de Botones -->
-    <div class="cta-buttons-group">
-        <a href="https://api.whatsapp.com/send?phone=584268467458&text=Hola!%20Me%20interesa%20obtener%20informacion%20sobre%20el%20Paquete%20de%20Prompts%20Corporativos." target="_blank" class="btn-nav btn-cta-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
-        </a>
-        
-        <a href="mailto:neuralsynthetix@gmail.com?subject=Consulta:%20Paquete%20de%20Prompts%20Corporativos&body=Hola%20equipo%20de%20NeuralSynthetix,%20me%20gustaria%20recibir%20mas%20informacion%20sobre%20el%20Paquete%20de%20Prompts%20Corporativos." class="btn-nav btn-cta-email">
-            <i class="fa-solid fa-envelope"></i> Solicitar por Correo
-        </a>
-    </div>
-</div>
+                <div class="projects-grid">
+                    <!-- Tarjeta de Proyecto 1 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./img/paquete1.jpg" alt="Arquitectura de System Prompts" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-es="System Prompts & Flujos Modulares" data-en="System Prompts & Modular Workflows">System Prompts & Flujos Modulares</h3>
+                            <p data-es="Estructuración lógica con asignación de roles, contextos de negocio y reglas estrictas de salida." data-en="Logical structuring with role assignment, business context, and strict output rules.">Estructuración lógica con asignación de roles, contextos de negocio y reglas estrictas de salida.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de Proyecto 2 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./img/paquete2.jpg" alt="Formatos Estructurados JSON y YAML" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-es="Salidas JSON & Schemas Listos para API" data-en="JSON Outputs & API-Ready Schemas">Salidas JSON & Schemas Listos para API</h3>
+                            <p data-es="Respuestas estandarizadas y parseables listas para integrarse en backend, bases de datos o automatizaciones." data-en="Standardized, parseable responses ready to integrate into backends, databases, or automations.">Respuestas estandarizadas y parseables listas para integrarse en backend, bases de datos o automatizaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario Directo de Contacto -->
+        <section id="contacto-servicio" class="section">
+            <div class="container">
+                <h2 class="section-title" data-es="Solicita tu Paquete Corporativo" data-en="Request Your Corporate Package">Solicita tu Paquete Corporativo</h2>
+                <p class="section-subtitle" data-es="Cuéntanos sobre los procesos que deseas automatizar y diseñaremos la arquitectura de prompts idónea." data-en="Tell us about the processes you wish to automate and we will design the ideal prompt architecture.">Cuéntanos sobre los procesos que deseas automatizar y diseñaremos la arquitectura de prompts idónea.</p>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" data-es-placeholder="Nombre completo" data-en-placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo corporativo" data-es-placeholder="Correo corporativo" data-en-placeholder="Corporate Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="empresa" name="empresa" placeholder="Empresa / Organización" data-es-placeholder="Empresa / Organización" data-en-placeholder="Company / Organization" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe brevemente los flujos o casos de uso que requieres..." data-es-placeholder="Describe brevemente los flujos o casos de uso que requieres..." data-en-placeholder="Briefly describe the workflows or use cases you require..." required></textarea>
+                    </div>
+                    <div class="buttons-group">
+                        <button type="button" id="btn-whatsapp" class="btn-primary btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</span>
+                        </button>
+                        <button type="button" id="btn-email" class="btn-primary btn-email">
+                            <i class="fa-solid fa-envelope"></i> <span data-es="Enviar por Correo" data-en="Send via Email">Enviar por Correo</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="contacto" id="footer-info">
+            <div class="footer-container">
+                <h3 class="footer-title" data-es="Contacto Directo" data-en="Direct Contact">Contacto Directo</h3>
+
+                <div class="contacto-info-grid">
+                    <div class="contacto-linea">
+                        <p><strong data-es="Correo: " data-en="Email: ">Correo: </strong></p>
+                        <a href="mailto:neuralsynthetix@gmail.com">neuralsynthetix@gmail.com</a>
+                    </div>
+                    <div class="contacto-linea">
+                        <p><strong data-es="Teléfono: " data-en="Phone: ">Teléfono: </strong></p>
+                        <a href="https://wa.me/584268467458" target="_blank" rel="noopener noreferrer">+58 426 8467 458</a>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="redes-contacto">
+                    <a href="https://github.com/MariandryG" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/git.png" alt="GitHub"> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/neuralsynthetix/?hl=es" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/instagram.png" alt="Instagram"> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariandry-garcia-76b708344/" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/linkedin.png" alt="LinkedIn"> LinkedIn
+                    </a>
+                </div>
+                <div class="footer-credits">
+                    <p>&copy; 2026 NeuralSynthetix. All rights reserved. &lt;AD/MG&gt;</p>
+                </div>
+            </div>
+        </footer>
 
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>

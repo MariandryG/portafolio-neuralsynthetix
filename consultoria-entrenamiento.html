@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoría & Entrenamiento | NeuralSynthetix</title>
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
-    <link rel="stylesheet" href="stylo.css?v=2">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
-    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="stylesheet" href="stylo.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -17,9 +16,20 @@
         <div class="logo-container">
             <a href="index.html" class="logo-text">NEURAL<span>SYNTHETIX</span></a>
         </div>
-        <a href="index.html#servicios" class="btn-nav">
-            <i class="fa-solid fa-arrow-left"></i> Volver a Soluciones
-        </a>
+        
+        <div class="nav-controls">
+            <!-- 1. Botón Volver -->
+            <a href="index.html#servicios" class="btn-nav">
+                <i class="fa-solid fa-arrow-left"></i> 
+                <span data-es="Volver a Soluciones" data-en="Back to Solutions">Volver a Soluciones</span>
+            </a>
+
+            <!-- 2. Botón de Idioma (extremo derecho) -->
+            <button id="btn-lang" class="btn-lang">
+                <i class="fa-solid fa-globe"></i>
+                <span id="lang-text">EN</span>
+            </button>
+        </div>
     </nav>
 
     <!-- Contenido Principal -->
@@ -27,52 +37,153 @@
         
         <!-- Encabezado -->
         <div class="solution-detail-header">
-            <span class="solution-badge">Solución 03</span>
-            <h1>Consultoría & Entrenamiento</h1>
-            <p class="lead">Capacitación técnica y estratégica para empoderar a tu equipo en la formulación de prompts eficientes, integración de flujos de trabajo e implementación responsable de IA corporativa.</p>
+            <span class="solution-badge" data-es="Solución 04" data-en="Solution 04">Solución 04</span>
+            <h1 data-es="Consultoría & Entrenamiento" data-en="Consulting & Training">Consultoría & Entrenamiento</h1>
+            <p class="lead" data-es="Capacitación técnica y estratégica para empoderar a tu equipo en la formulación de prompts eficientes, integración de flujos de trabajo e implementación responsable de IA corporativa." data-en="Technical and strategic training to empower your team in crafting efficient prompts, integrating workflows, and implementing responsible corporate AI.">Capacitación técnica y estratégica para empoderar a tu equipo en la formulación de prompts eficientes, integración de flujos de trabajo e implementación responsable de IA corporativa.</p>
         </div>
 
         <!-- Rejilla de Información -->
         <div class="solution-grid">
             
             <div class="detail-card">
-                <h3><i class="fa-solid fa-handshake"></i> ¿En qué consiste este servicio?</h3>
+                <h3><i class="fa-solid fa-handshake"></i> <span data-es="¿En qué consiste este servicio?" data-en="What does this service consist of?">¿En qué consiste este servicio?</span></h3>
                 <ul class="detail-list">
-                    <li><strong>Talleres de Prompt Engineering:</strong> Capacitación teórico-práctica adaptada al nivel técnico de tu personal.</li>
-                    <li><strong>Estrategia e Integración de IA:</strong> Asesoría técnica para seleccionar los modelos y arquitecturas más eficientes según tu infraestructura.</li>
-                    <li><strong>Manual de Buenas Prácticas:</strong> Guías internas y documentación para asegurar un uso homogéneo y seguro de la IA en la empresa.</li>
-                    <li><strong>Sesiones de Mentoría 1 a 1:</strong> Acompañamiento directo para la resolución de dudas específicas y revisión de proyectos activos.</li>
+                    <li>
+                        <strong data-es="Talleres de Prompt Engineering:" data-en="Prompt Engineering Workshops:">Talleres de Prompt Engineering:</strong> 
+                        <span data-es="Capacitación teórico-práctica adaptada al nivel técnico de tu personal." data-en="Theoretical and practical training tailored to your staff's technical background.">Capacitación teórico-práctica adaptada al nivel técnico de tu personal.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Estrategia e Integración de IA:" data-en="AI Strategy & Integration:">Estrategia e Integración de IA:</strong> 
+                        <span data-es="Asesoría técnica para seleccionar los modelos y arquitecturas más eficientes según tu infraestructura." data-en="Technical guidance to select the most efficient models and architectures for your infrastructure.">Asesoría técnica para seleccionar los modelos y arquitecturas más eficientes según tu infraestructura.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Manual de Buenas Prácticas:" data-en="Best Practices Playbook:">Manual de Buenas Prácticas:</strong> 
+                        <span data-es="Guías internas y documentación para asegurar un uso homogéneo y seguro de la IA en la empresa." data-en="Internal guidelines and documentation to ensure consistent and secure AI usage across the enterprise.">Guías internas y documentación para asegurar un uso homogéneo y seguro de la IA en la empresa.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Sesiones de Mentoría 1 a 1:" data-en="1-on-1 Mentorship Sessions:">Sesiones de Mentoría 1 a 1:</strong> 
+                        <span data-es="Acompañamiento directo para la resolución de dudas específicas y revisión de proyectos activos." data-en="Direct support for addressing specific questions and reviewing active projects.">Acompañamiento directo para la resolución de dudas específicas y revisión de proyectos activos.</span>
+                    </li>
                 </ul>
             </div>
 
             <div class="detail-card">
-                <h3><i class="fa-solid fa-award"></i> Beneficios Clave</h3>
+                <h3><i class="fa-solid fa-award"></i> <span data-es="Beneficios Clave" data-en="Key Benefits">Beneficios Clave</span></h3>
                 <ul class="detail-list">
-                    <li><strong>Autonomía Organizacional:</strong> Tu equipo aprenderá a diseñar y depurar sus propios prompts sin depender de externos.</li>
-                    <li><strong>Aumento de la Productividad:</strong> Reducción del tiempo de iteración manual y aceleración en la adopción de herramientas de IA.</li>
-                    <li><strong>Seguridad y Gobernanza:</strong> Pautas claras para evitar la filtración de información sensible o el uso inapropiado de la tecnología.</li>
+                    <li>
+                        <strong data-es="Autonomía Organizacional:" data-en="Organizational Autonomy:">Autonomía Organizacional:</strong> 
+                        <span data-es="Tu equipo aprenderá a diseñar y depurar sus propios prompts sin depender de externos." data-en="Your team will learn to design and debug their own prompts without relying on external parties.">Tu equipo aprenderá a diseñar y depurar sus propios prompts sin depender de externos.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Aumento de la Productividad:" data-en="Increased Productivity:">Aumento de la Productividad:</strong> 
+                        <span data-es="Reducción del tiempo de iteración manual y aceleración en la adopción de herramientas de IA." data-en="Reduced manual iteration time and accelerated adoption of AI tools.">Reducción del tiempo de iteración manual y aceleración en la adopción de herramientas de IA.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Seguridad y Gobernanza:" data-en="Security & Governance:">Seguridad y Gobernanza:</strong> 
+                        <span data-es="Pautas claras para evitar la filtración de información sensible o el uso inapropiado de la tecnología." data-en="Clear rules to prevent sensitive data leaks and inappropriate technology use.">Pautas claras para evitar la filtración de información sensible o el uso inapropiado de la tecnología.</span>
+                    </li>
                 </ul>
             </div>
 
         </div>
 
-        <!-- Llamado a la Acción -->
-        <div class="solution-cta">
-            <h3>¿Quieres preparar a tu equipo para el futuro del trabajo con IA?</h3>
-            <p>Diseñamos un programa de entrenamiento o consultoría a la medida de los objetivos de tu empresa.</p>
+        <!-- Galería de Modalidades de Capacitación -->
+        <section class="section">
+            <h2 class="section-title" data-es="Modalidades & Talleres de Capacitación" data-en="Training Formats & Workshops">Modalidades & Talleres de Capacitación</h2>
+            <p class="section-subtitle" data-es="Programas de formación adaptados a los objetivos y dinámica de tu organización." data-en="Training programs tailored to your organization's goals and dynamics.">Programas de formación adaptados a los objetivos y dinámica de tu organización.</p>
 
-            <div class="cta-buttons-group">
-                <a href="https://api.whatsapp.com/send?phone=584268467458&text=Hola!%20Me%20interesa%20obtener%20informacion%20sobre%20el%20servicio%20de%20Consultoria%20y%20Entrenamiento." target="_blank" class="btn-nav btn-cta-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
-                </a>
-                
-                <a href="mailto:neuralsynthetix@gmail.com?subject=Consulta:%20Consultoria%20y%20Entrenamiento&body=Hola%20equipo%20de%20NeuralSynthetix,%20me%20gustaria%20recibir%20mas%20informacion%20sobre%20el%20servicio%20de%20Consultoria%20y%20Entrenamiento." class="btn-nav btn-cta-email">
-                    <i class="fa-solid fa-envelope"></i> Solicitar por Correo
-                </a>
+            <div class="cards-grid">
+                <!-- Tarjeta 1 -->
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="./img/consultar1.jpg" alt="Talleres de Prompt Engineering & IA" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-es="Talleres de Prompt Engineering & IA" data-en="Prompt Engineering & AI Workshops">Talleres de Prompt Engineering & IA</h3>
+                        <p data-es="Capacitación práctica presencial o remota para equipos de desarrollo y negocios, enfocada en la creación de prompts óptimos y automatización." data-en="Hands-on in-person or remote training for dev and business teams, focused on constructing optimal prompts and automation.">Capacitación práctica presencial o remota para equipos de desarrollo y negocios, enfocada en la creación de prompts óptimos y automatización.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="./img/consutar2.jpg" alt="Asesoría Estratégica & Mentoría 1 a 1" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-es="Asesoría Estratégica & Mentoría 1 a 1" data-en="Strategic Consulting & 1-on-1 Mentorship">Asesoría Estratégica & Mentoría 1 a 1</h3>
+                        <p data-es="Sesiones personalizadas de arquitectura, revisión de código/prompts y acompañamiento directo en la implementación de soluciones de IA." data-en="Personalized sessions covering architecture, code/prompt review, and direct guidance for implementing AI solutions.">Sesiones personalizadas de arquitectura, revisión de código/prompts y acompañamiento directo en la implementación de soluciones de IA.</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Formulario Directo de Contacto -->
+        <section id="contacto-servicio" class="section">
+            <div class="container">
+                <h2 class="section-title" data-es="Capacita a tu Equipo Hoy" data-en="Empower Your Team Today">Capacita a tu Equipo Hoy</h2>
+                <p class="section-subtitle" data-es="Cuéntanos sobre los objetivos de tu organización y diseñaremos un programa de entrenamiento a la medida." data-en="Tell us about your organization's goals and we will design a tailored training program.">Cuéntanos sobre los objetivos de tu organización y diseñaremos un programa de entrenamiento a la medida.</p>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" data-es-placeholder="Nombre completo" data-en-placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo corporativo" data-es-placeholder="Correo corporativo" data-en-placeholder="Corporate Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="empresa" name="empresa" placeholder="Empresa / Organización" data-es-placeholder="Empresa / Organización" data-en-placeholder="Company / Organization" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tus necesidades de capacitación o consultoría en IA..." data-es-placeholder="Cuéntanos sobre tus necesidades de capacitación o consultoría en IA..." data-en-placeholder="Tell us about your AI training or consulting needs..." required></textarea>
+                    </div>
+                    <div class="buttons-group">
+                        <button type="button" id="btn-whatsapp" class="btn-primary btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</span>
+                        </button>
+                        <button type="button" id="btn-email" class="btn-primary btn-email">
+                            <i class="fa-solid fa-envelope"></i> <span data-es="Enviar por Correo" data-en="Send via Email">Enviar por Correo</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="contacto" id="footer-info">
+            <div class="footer-container">
+                <h3 class="footer-title" data-es="Contacto Directo" data-en="Direct Contact">Contacto Directo</h3>
+
+                <div class="contacto-info-grid">
+                    <div class="contacto-linea">
+                        <p><strong data-es="Correo: " data-en="Email: ">Correo: </strong></p>
+                        <a href="mailto:neuralsynthetix@gmail.com">neuralsynthetix@gmail.com</a>
+                    </div>
+                    <div class="contacto-linea">
+                        <p><strong data-es="Teléfono: " data-en="Phone: ">Teléfono: </strong></p>
+                        <a href="https://wa.me/584268467458" target="_blank" rel="noopener noreferrer">+58 426 8467 458</a>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="redes-contacto">
+                    <a href="https://github.com/MariandryG" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/git.png" alt="GitHub"> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/neuralsynthetix/?hl=es" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/instagram.png" alt="Instagram"> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariandry-garcia-76b708344/" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/linkedin.png" alt="LinkedIn"> LinkedIn
+                    </a>
+                </div>
+                <div class="footer-credits">
+                    <p>&copy; 2026 NeuralSynthetix. All rights reserved. &lt;AD/MG&gt;</p>
+                </div>
+            </div>
+        </footer>
 
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,59 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
-    <link rel="stylesheet" href="stylo.css">
+    <link rel="stylesheet" href="stylo.css?v=2">
+    <!-- Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Portafolio NeuralSynthetix</title>
 </head>
 <body>
+
+    <!-- Navegación -->
     <nav class="navbar">
         <div class="logo-container">
+            <img src="./img/logo.png" alt="NeuralSynthetix Logo" class="logo-img">
             <span class="logo-text">NEURAL<span>SYNTHETIX</span></span>
         </div>
-        <!-- Menú de navegación con ID para el script -->
+        
         <ul class="nav-links" id="nav-menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Sobre Nosotros</a></li>
-            <li><a href="#servicios">Soluciones</a></li>
-            <li><a href="#contacto" class="btn-nav">Contactar</a></li>
+            <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+            <li><a href="#nosotros" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+            <li><a href="#servicios" data-es="Soluciones" data-en="Solutions">Soluciones</a></li>
+            <li><a href="#contacto" class="btn-nav" data-es="Contactar" data-en="Contact">Contactar</a></li>
         </ul>
-    <!-- Botón Hamburguesa para Móviles -->
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+
+        <div class="nav-actions">
+            <!-- Botón Selector de Idioma -->
+            <button id="btn-lang" class="btn-lang" aria-label="Cambiar idioma">
+                <i class="fa-solid fa-globe"></i> <span id="lang-text">EN</span>
+            </button>
+
+            <!-- Botón Hamburguesa para Móviles -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </nav>
-    <!-- Hero Section -->
+
     <header id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Optimiza la Inteligencia Artificial de tu Empresa</h1>
-            <p>Diseñamos e implementamos paquetes de prompts de alto rendimiento para potenciar los modelos de IA corporativos.</p>
-            <a href="#contacto" class="btn-primary">Solicitar Consultoría</a>
+
+            <h1 data-es="Desarrollo Web, Aplicaciones e Inteligencia Artificial a la Medida" data-en="Tailored Web Development, Applications & Artificial Intelligence">Desarrollo Web, Aplicaciones e Inteligencia Artificial a la Medida</h1>
+
+            <p class="hero-description" data-es="Creamos páginas web de alto impacto, aplicaciones dinámicas y arquitecturas de Inteligencia Artificial para potenciar negocios e iniciativas tecnológicas." data-en="We build high-impact websites, dynamic applications, and AI architectures to power businesses and tech initiatives.">
+                Creamos páginas web de alto impacto, aplicaciones dinámicas y arquitecturas de Inteligencia Artificial para potenciar negocios e iniciativas tecnológicas.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn-primary" data-es="Solicitar Consultoría" data-en="Request Consulting">Solicitar Consultoría</a>
+            </div>
+
+            <!-- LOGO COLOCADO ABAJO DE LOS BOTONES -->
+            <div class="hero-logo-wrapper">
+                <img src="./img/logo.png" alt="NeuralSynthetix" class="hero-logo-img">
+            </div>
+
         </div>
     </header>
+
     <!-- Sobre Nosotros -->
     <section id="nosotros" class="section">
         <div class="container">
-            <h2 class="section-title" data-lang="es">Sobre Nosotros</h2>
-            <h2 class="section-title" data-lang="en" style="display: none;">About Us</h2>
+            <h2 class="section-title" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</h2>
 
             <div class="about-grid">
                 <div class="about-text">
-                    <h3 data-lang="es">Sintetizando el conocimiento humano para la IA</h3>
-                    <h3 data-lang="en" style="display: none;">Synthesizing Human Knowledge for AI</h3>
-                    <p data-lang="es">En <strong>NeuralSynthetix</strong> nos especializamos en la ingeniería de prompts avanzada. Transformamos requerimientos complejos en instrucciones precisas y estructuradas que maximizan el rendimiento, precisión y eficiencia de los modelos de lenguaje en el entorno empresarial.</p>
-                    <p data-lang="en" style="display: none;">At <strong>NeuralSynthetix</strong> we specialize in advanced prompt engineering. We transform complex requirements into precise, structured instructions that maximize performance and efficiency for enterprise AI models.</p>
+                    <h3 data-es="Sintetizando tecnología, desarrollo web e Inteligencia Artificial" data-en="Synthesizing Technology, Web Development & AI">Sintetizando tecnología, desarrollo web e Inteligencia Artificial</h3>
+                    <p data-es="En NeuralSynthetix unimos el desarrollo frontend y full-stack con la ingeniería de prompts y soluciones de IA. Transformamos ideas y requerimientos complejos en interfaces modernas, aplicaciones escalables e instrucciones precisas que potencian el rendimiento digital de las empresas." data-en="At NeuralSynthetix we combine frontend & full-stack web development with advanced prompt engineering and AI solutions. We transform complex requirements into modern interfaces, scalable web applications, and high-performance AI integration.">En <strong>NeuralSynthetix</strong> unimos el desarrollo frontend y full-stack con la ingeniería de prompts y soluciones de IA. Transformamos ideas y requerimientos complejos en interfaces modernas, aplicaciones escalables e instrucciones precisas que potencian el rendimiento digital de las empresas.</p>
                 </div>
             </div>
-        <!-- Apartado del Equipo Principal -->
+
+            <!-- Equipo Principal -->
             <div class="team-container">
-                <h3 class="team-title" data-lang="es">Equipo Principal</h3>
-                <h3 class="team-title" data-lang="en" style="display: none;">Core Team</h3>
+                <h3 class="team-title" data-es="Equipo Principal" data-en="Core Team">Equipo Principal</h3>
 
                 <div class="team-grid">
-                <!-- Miembro 1 -->
+                    <!-- Miembro 1 -->
                     <div class="team-card">
                         <div class="team-img-wrapper">
                             <img src="./img/abril.png.jpeg" alt="Abril Díaz" class="team-img">
@@ -61,126 +85,131 @@
                         <div class="team-info">
                             <span class="team-role">CEO</span>
                             <h4>Abril Díaz</h4>
-                            <p>Ing. Inteligencia Artificial</p>
+                            <p data-es="Ing. Inteligencia Artificial" data-en="AI Engineer">Ing. Inteligencia Artificial</p>
                         </div>
                     </div>
-                <!-- Miembro 2 -->
-                <div class="team-card">
-                    <div class="team-img-wrapper">
-                        <img src="./img/mariandry.png" alt="Mariandry García" class="team-img">
-                    </div>
-                    <div class="team-info">
-                        <span class="team-role">Senior</span>
-                        <h4>Mariandry García</h4>
-                        <p>Lic. Ciencia de Datos<br>Programador Web Frontend</p>
-                    </div>
-                </div>
-                <!-- Miembro 3 -->
+                    <!-- Miembro 2 -->
                     <div class="team-card">
                         <div class="team-img-wrapper">
-                            <img src="./img/harry.png.jpeg" alt="Harry" class="team-img">
+                            <img src="./img/mariandry.png" alt="Mariandry García" class="team-img">
+                        </div>
+                        <div class="team-info">
+                            <span class="team-role">Senior</span>
+                            <h4>Mariandry García</h4>
+                            <p data-es="Lic. Ciencia de Datos<br>Programador Web Frontend" data-en="B.S. Data Science<br>Frontend Web Developer">Lic. Ciencia de Datos<br>Programador Web Frontend</p>
+                        </div>
+                    </div>
+                    <!-- Miembro 3 -->
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img src="./img/harry.png.jpeg" alt="Enmanuel Hary" class="team-img">
                         </div>
                         <div class="team-info">
                             <span class="team-role">Junior</span>
                             <h4>Enmanuel Hary</h4>
-                            <p>Ing. Inteligencia Artificial</p>
+                            <p data-es="Ing. Inteligencia Artificial" data-en="AI Engineer">Ing. Inteligencia Artificial</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<!-- Lo que Hacemos / Soluciones -->
+
+    <!-- Soluciones -->
     <section id="servicios" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title">Nuestras Soluciones</h2>
+            <h2 class="section-title" data-es="Nuestras Soluciones" data-en="Our Solutions">Nuestras Soluciones</h2>
+
             <div class="cards-grid">
-                <a href="./paquete-promts.html" style="text-decoration: none; color: inherit; display: block;">
+                <!-- Solución 1 -->
+                <a href="./desarrollo-web.html" class="card-link">
+                    <div class="card">
+                        <i class="fa-solid fa-code card-icon"></i>
+                        <h3 data-es="Desarrollo Web & Apps Web" data-en="Web Development & Web Apps">Desarrollo Web & Apps Web</h3>
+                        <p data-es="Diseño y maquetación de plataformas dinámicas, responsive, intuitivas y optimizadas para rendimiento e interacción." data-en="Design and layout of dynamic, responsive, intuitive platforms optimized for performance and interaction.">Diseño y maquetación de plataformas dinámicas, responsive, intuitivas y optimizadas para rendimiento e interacción.</p>
+                    </div>
+                </a>
+
+                <!-- Solución 2 -->
+                <a href="./paquete-promts.html" class="card-link">
                     <div class="card">
                         <i class="fa-solid fa-brain card-icon"></i>
-                        <h3>Paquetes de Prompts Corporativos</h3>
-                        <p>Arquitecturas de instrucciones a medida preparadas para integrarse en tus flujos de trabajo clave.</p>
+                        <h3 data-es="Paquetes de Prompts Corporativos" data-en="Corporate Prompt Packages">Paquetes de Prompts Corporativos</h3>
+                        <p data-es="Arquitecturas de instrucciones a medida preparadas para integrarse en tus flujos de trabajo clave." data-en="Tailored instruction architectures ready to integrate into your key workflows.">Arquitecturas de instrucciones a medida preparadas para integrarse en tus flujos de trabajo clave.</p>
                     </div>
                 </a>
-                <!-- Segunda Tarjeta en index.html -->
-                <a href="./calibracion-optimizacion.html" style="text-decoration: none; color: inherit; display: block;">
+
+                <!-- Solución 3 -->
+                <a href="./calibracion-optimizacion.html" class="card-link">
                     <div class="card">
                         <i class="fa-solid fa-sliders card-icon"></i>
-                        <h3>Calibración y Optimización</h3>
-                        <p>Ajuste fino de prompts existentes para reducir alucinaciones de la IA y mejorar la precisión de respuesta.</p>
+                        <h3 data-es="Calibración y Optimización" data-en="Calibration & Optimization">Calibración y Optimización</h3>
+                        <p data-es="Ajuste fino de prompts existentes para reducir alucinaciones de la IA y mejorar la precisión de respuesta." data-en="Fine-tuning existing prompts to reduce AI hallucinations and enhance response precision.">Ajuste fino de prompts existentes para reducir alucinaciones de la IA y mejorar la precisión de respuesta.</p>
                     </div>
                 </a>
-                <!-- Tercera Tarjeta en index.html -->
-                <a href="./consultoria-entrenamiento.html" style="text-decoration: none; color: inherit; display: block;">
+
+                <!-- Solución 4 -->
+                <a href="./consultoria-entrenamiento.html" class="card-link">
                     <div class="card">
                         <i class="fa-solid fa-handshake card-icon"></i>
-                        <h3>Consultoría & Entrenamiento</h3>
-                        <p>Acompañamiento personalizado para capacitar a tus equipos en la formulación de prompts eficientes.</p>
+                        <h3 data-es="Consultoría & Entrenamiento" data-en="Consulting & Training">Consultoría & Entrenamiento</h3>
+                        <p data-es="Acompañamiento personalizado para capacitar a tus equipos en desarrollo web e integración de IA." data-en="Personalized support to empower your teams in web development and AI integration.">Acompañamiento personalizado para capacitar a tus equipos en desarrollo web e integración de IA.</p>
                     </div>
                 </a>
             </div>
         </div>
     </section>
-<!-- SECCIÓN DE CONTACTO (FORMULARIO INTERACTIVO) -->
+
+    <!-- Sección de Contacto -->
     <section id="contacto" class="section">
         <div class="container">
-            <h2 class="section-title" data-lang="es">Hablemos de tu Proyecto</h2>
-            <h2 class="section-title" data-lang="en" style="display: none;">Let's Talk About Your Project</h2>
-            <p class="section-subtitle" data-lang="es">Cada empresa tiene necesidades únicas. Contáctanos para diseñar la solución exacta que tu equipo necesita.</p>
-            <p class="section-subtitle" data-lang="en" style="display: none;">Every company has unique needs. Contact us to design the exact solution your team requires.</p>
+            <h2 class="section-title" data-es="Hablemos de tu Proyecto" data-en="Let's Talk About Your Project">Hablemos de tu Proyecto</h2>
+
+            <p class="section-subtitle" data-es="Cada empresa tiene necesidades únicas. Contáctanos para diseñar la solución exacta en desarrollo web o IA que tu equipo necesita." data-en="Every business has unique needs. Contact us to design the exact web or AI solution your team requires.">Cada empresa tiene necesidades únicas. Contáctanos para diseñar la solución exacta en desarrollo web o IA que tu equipo necesita.</p>
     
             <form id="contact-form" class="contact-form">
                 <div class="form-group">
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" data-es-placeholder="Nombre completo" data-en-placeholder="Full Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Correo corporativo" required>
+                    <input type="email" id="email" name="email" placeholder="Correo corporativo" data-es-placeholder="Correo corporativo" data-en-placeholder="Corporate Email" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" id="empresa" name="empresa" placeholder="Empresa / Organización" required>
+                    <input type="text" id="empresa" name="empresa" placeholder="Empresa / Organización" data-es-placeholder="Empresa / Organización" data-en-placeholder="Company / Organization" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos brevemente sobre tus requerimientos..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto web o requerimientos de IA..." data-es-placeholder="Cuéntanos sobre tu proyecto web o requerimientos de IA..." data-en-placeholder="Tell us about your web project or AI requirements..." required></textarea>
                 </div>
-            <!-- Botones de Envío -->
                 <div class="buttons-group">
                     <button type="button" id="btn-whatsapp" class="btn-primary btn-whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i> <span data-lang="es">Enviar por WhatsApp</span><span data-lang="en" style="display: none;">Send via WhatsApp</span>
+                        <i class="fa-brands fa-whatsapp"></i> 
+                        <span data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</span>
                     </button>
                     <button type="button" id="btn-email" class="btn-primary btn-email">
-                        <i class="fa-solid fa-envelope"></i> <span data-lang="es">Enviar por Correo</span><span data-lang="en" style="display: none;">Send via Email</span>
+                        <i class="fa-solid fa-envelope"></i> 
+                        <span data-es="Enviar por Correo" data-en="Send via Email">Enviar por Correo</span>
                     </button>
                 </div>
             </form>
         </div>
     </section>
 
-<!-- FOOTER CON INFORMACIÓN DE CONTACTO DIRECTO Y REDES -->
+    <!-- Footer -->
     <footer class="contacto" id="footer-info">
         <div class="footer-container">
-            <h3 class="footer-title" data-lang="es">Contacto Directo</h3>
-            <h3 class="footer-title" data-lang="en" style="display: none;">Direct Contact</h3>
+            <h3 class="footer-title" data-es="Contacto Directo" data-en="Direct Contact">Contacto Directo</h3>
 
             <div class="contacto-info-grid">
-                <div class="contacto-linea" data-lang="es">
-                    <p><strong>Correo: </strong></p>
-                    <a href="mailto:mariandrygarcia78@gmail.com">neuralsynthetix@gmail.com</a>
-                </div>
-                <div class="contacto-linea" data-lang="en" style="display: none;">
-                    <p><strong>Email: </strong></p>
+                <div class="contacto-linea">
+                    <p><strong data-es="Correo: " data-en="Email: ">Correo: </strong></p>
                     <a href="mailto:neuralsynthetix@gmail.com">neuralsynthetix@gmail.com</a>
                 </div>
-                <div class="contacto-linea" data-lang="es">
-                    <p><strong>Teléfono: </strong></p>
-                    <a href="https://wa.me/584268467458" target="_blank" rel="noopener noreferrer">+58 426 8467 458</a>
-                </div>
-                <div class="contacto-linea" data-lang="en" style="display: none;">
-                    <p><strong>Phone: </strong></p>
+                <div class="contacto-linea">
+                    <p><strong data-es="Teléfono: " data-en="Phone: ">Teléfono: </strong></p>
                     <a href="https://wa.me/584268467458" target="_blank" rel="noopener noreferrer">+58 426 8467 458</a>
                 </div>
             </div>
 
-    <!-- Redes Sociales -->
             <div class="redes-contacto">
                 <a href="https://github.com/MariandryG" target="_blank" rel="noopener noreferrer" class="icono-contacto">
                     <img src="./img/git.png" alt="GitHub"> GitHub
@@ -192,11 +221,13 @@
                     <img src="./img/linkedin.png" alt="LinkedIn"> LinkedIn
                 </a>
             </div>
+
             <div class="footer-credits">
                 <p>&copy; 2026 NeuralSynthetix. All rights reserved. &lt;AD/MG&gt;</p>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

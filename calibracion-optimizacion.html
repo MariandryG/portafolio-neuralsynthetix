@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calibración y Optimización | NeuralSynthetix</title>
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
     <link rel="stylesheet" href="stylo.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -15,9 +16,20 @@
         <div class="logo-container">
             <a href="index.html" class="logo-text">NEURAL<span>SYNTHETIX</span></a>
         </div>
-        <a href="index.html#servicios" class="btn-nav">
-            <i class="fa-solid fa-arrow-left"></i> Volver a Soluciones
-        </a>
+        
+        <div class="nav-controls">
+            <!-- 1. Botón Volver -->
+            <a href="index.html#servicios" class="btn-nav">
+                <i class="fa-solid fa-arrow-left"></i> 
+                <span data-es="Volver a Soluciones" data-en="Back to Solutions">Volver a Soluciones</span>
+            </a>
+
+            <!-- 2. Botón de Idioma (extremo derecho) -->
+            <button id="btn-lang" class="btn-lang">
+                <i class="fa-solid fa-globe"></i>
+                <span id="lang-text">EN</span>
+            </button>
+        </div>
     </nav>
 
     <!-- Contenido Principal -->
@@ -25,52 +37,155 @@
         
         <!-- Encabezado -->
         <div class="solution-detail-header">
-            <span class="solution-badge">Solución 02</span>
-            <h1>Calibración y Optimización</h1>
-            <p class="lead">Ajuste fino de prompts existentes para reducir alucinaciones, minimizar costos de ejecución y elevar drásticamente la precisión de tus modelos en producción.</p>
+            <span class="solution-badge" data-es="Solución 03" data-en="Solution 03">Solución 03</span>
+            <h1 data-es="Calibración y Optimización" data-en="Calibration & Optimization">Calibración y Optimización</h1>
+            <p class="lead" data-es="Ajuste fino de prompts existentes para reducir alucinaciones, minimizar costos de ejecución y elevar drásticamente la precisión de tus modelos en producción." data-en="Fine-tuning of existing prompts to reduce hallucinations, minimize execution costs, and dramatically increase model accuracy in production.">Ajuste fino de prompts existentes para reducir alucinaciones, minimizar costos de ejecución y elevar drásticamente la precisión de tus modelos en producción.</p>
         </div>
 
         <!-- Rejilla de Información -->
         <div class="solution-grid">
             
             <div class="detail-card">
-                <h3><i class="fa-solid fa-sliders"></i> ¿En qué consiste este servicio?</h3>
+                <h3><i class="fa-solid fa-sliders"></i> <span data-es="¿En qué consiste este servicio?" data-en="What does this service consist of?">¿En qué consiste este servicio?</span></h3>
                 <ul class="detail-list">
-                    <li><strong>Auditoría de Prompts Existentes:</strong> Evaluación de instrucciones previas para identificar fuga de contexto o vulnerabilidades.</li>
-                    <li><strong>Reducción de Alucinaciones:</strong> Aplicación de técnicas avanzadas de <em>grounding</em> y estructuras Few-Shot para acotar la libertad del modelo.</li>
-                    <li><strong>Ajuste de Hiperparámetros:</strong> Calibración fina de valores de <em>Temperature</em>, <em>Top_P</em> y penalizaciones de presencia/frecuencia.</li>
-                    <li><strong>Depuración de Tokens:</strong> Reestructuración de la redacción para disminuir el conteo de tokens de entrada sin perder calidad.</li>
+                    <li>
+                        <strong data-es="Auditoría de Prompts Existentes:" data-en="Audit of Existing Prompts:">Auditoría de Prompts Existentes:</strong> 
+                        <span data-es="Evaluación de instrucciones previas para identificar fuga de contexto o vulnerabilidades." data-en="Evaluation of previous instructions to identify context leaks or vulnerabilities.">Evaluación de instrucciones previas para identificar fuga de contexto o vulnerabilidades.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Reducción de Alucinaciones:" data-en="Hallucination Reduction:">Reducción de Alucinaciones:</strong> 
+                        <span data-es="Aplicación de técnicas avanzadas de grounding y estructuras Few-Shot para acotar la libertad del modelo." data-en="Application of advanced grounding techniques and Few-Shot structures to narrow model freedom.">Aplicación de técnicas avanzadas de <em>grounding</em> y estructuras Few-Shot para acotar la libertad del modelo.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Ajuste de Hiperparámetros:" data-en="Hyperparameter Tuning:">Ajuste de Hiperparámetros:</strong> 
+                        <span data-es="Calibración fina de valores de Temperature, Top_P y penalizaciones de presencia/frecuencia." data-en="Fine calibration of Temperature, Top_P, and presence/frequency penalty values.">Calibración fina de valores de <em>Temperature</em>, <em>Top_P</em> y penalizaciones de presencia/frecuencia.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Depuración de Tokens:" data-en="Token Debugging:">Depuración de Tokens:</strong> 
+                        <span data-es="Reestructuración de la redacción para disminuir el conteo de tokens de entrada sin perder calidad." data-en="Restructuring phrasing to decrease input token counts without losing quality.">Reestructuración de la redacción para disminuir el conteo de tokens de entrada sin perder calidad.</span>
+                    </li>
                 </ul>
             </div>
 
             <div class="detail-card">
-                <h3><i class="fa-solid fa-shield-halved"></i> Beneficios Clave</h3>
+                <h3><i class="fa-solid fa-shield-halved"></i> <span data-es="Beneficios Clave" data-en="Key Benefits">Beneficios Clave</span></h3>
                 <ul class="detail-list">
-                    <li><strong>Respuestas Confiables:</strong> Eliminación de datos inventados o fuera del margen permitido por tu negocio.</li>
-                    <li><strong>Reducción de Costos de API:</strong> Menos consumo de tokens por solicitud equivale a una factura de API significativamente menor.</li>
-                    <li><strong>Blindaje Operativo:</strong> Protección mejorada contra intentos de manipulación o *prompt injection* de usuarios finales.</li>
+                    <li>
+                        <strong data-es="Respuestas Confiables:" data-en="Reliable Responses:">Respuestas Confiables:</strong> 
+                        <span data-es="Eliminación de datos inventados o fuera del margen permitido por tu negocio." data-en="Elimination of fabricated data or outputs outside your business boundaries.">Eliminación de datos inventados o fuera del margen permitido por tu negocio.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Reducción de Costos de API:" data-en="API Cost Reduction:">Reducción de Costos de API:</strong> 
+                        <span data-es="Menos consumo de tokens por solicitud equivale a una factura de API significativamente menor." data-en="Lower token consumption per request equals a significantly smaller API bill.">Menos consumo de tokens por solicitud equivale a una factura de API significativamente menor.</span>
+                    </li>
+                    <li>
+                        <strong data-es="Blindaje Operativo:" data-en="Operational Hardening:">Blindaje Operativo:</strong> 
+                        <span data-es="Protección mejorada contra intentos de manipulación o prompt injection de usuarios finales." data-en="Enhanced protection against tampering or prompt injection attempts from end users.">Protección mejorada contra intentos de manipulación o <em>prompt injection</em> de usuarios finales.</span>
+                    </li>
                 </ul>
             </div>
 
         </div>
 
-        <!-- Llamado a la Acción -->
-        <div class="solution-cta">
-            <h3>¿Tus modelos de IA generan respuestas ambiguas o imprecisas?</h3>
-            <p>Optimizamos tus instrucciones actuales para llevar el rendimiento al estándar corporativo.</p>
+        <!-- Muestras de Optimización & Métricas -->
+        <section class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title" data-es="Resultados & Muestras de Optimización" data-en="Results & Optimization Samples">Resultados & Muestras de Optimización</h2>
+                <p class="section-subtitle" data-es="Visualiza las comparativas de consumo de tokens, métricas de precisión y paneles de evaluación de nuestros modelos calibrados." data-en="Explore token consumption benchmarks, accuracy metrics, and evaluation dashboards for our calibrated models.">Visualiza las comparativas de consumo de tokens, métricas de precisión y paneles de evaluación de nuestros modelos calibrados.</p>
 
-            <div class="cta-buttons-group">
-                <a href="https://api.whatsapp.com/send?phone=584268467458&text=Hola!%20Me%20interesa%20obtener%20informacion%20sobre%20el%20servicio%20de%20Calibracion%20y%20Optimizacion." target="_blank" class="btn-nav btn-cta-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
-                </a>
-                
-                <a href="mailto:neuralsynthetix@gmail.com?subject=Consulta:%20Calibracion%20y%20Optimizacion&body=Hola%20equipo%20de%20NeuralSynthetix,%20me%20gustaria%20recibir%20mas%20informacion%20sobre%20el%20servicio%20de%20Calibracion%20y%20Optimizacion." class="btn-nav btn-cta-email">
-                    <i class="fa-solid fa-envelope"></i> Solicitar por Correo
-                </a>
+                <div class="projects-grid">
+                    <!-- Tarjeta de Proyecto 1 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./img/seguridad1.jpg" alt="Panel de Métricas y Eficiencia de Tokens" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-es="Panel de Métricas & Reducción de Costos" data-en="Metrics Dashboard & Cost Reduction">Panel de Métricas & Reducción de Costos</h3>
+                            <p data-es="Monitoreo en tiempo real de consumo de tokens y reducción de latencia tras la depuración de prompts." data-en="Real-time monitoring of token consumption and latency reduction following prompt debugging.">Monitoreo en tiempo real de consumo de tokens y reducción de latencia tras la depuración de prompts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de Proyecto 2 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./img/seguridad2.jpg" alt="Pruebas de Grounding y Seguridad" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-es="Pruebas de Grounding & Anti-Inyección" data-en="Grounding & Anti-Injection Testing">Pruebas de Grounding & Anti-Inyección</h3>
+                            <p data-es="Evaluaciones comparativas de precisión en respuestas y blindaje contra intentos de manipulación." data-en="Comparative evaluations of output accuracy and hardening against manipulation attempts.">Evaluaciones comparativas de precisión en respuestas y blindaje contra intentos de manipulación.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Formulario Directo de Contacto -->
+        <section id="contacto-servicio" class="section">
+            <div class="container">
+                <h2 class="section-title" data-es="Optimiza tus Modelos Hoy" data-en="Optimize Your Models Today">Optimiza tus Modelos Hoy</h2>
+                <p class="section-subtitle" data-es="Envíanos tus requerimientos de calibración y evaluaremos la infraestructura de IA de tu empresa." data-en="Send us your calibration requirements and we will evaluate your company's AI infrastructure.">Envíanos tus requerimientos de calibración y evaluaremos la infraestructura de IA de tu empresa.</p>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" data-es-placeholder="Nombre completo" data-en-placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo corporativo" data-es-placeholder="Correo corporativo" data-en-placeholder="Corporate Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="empresa" name="empresa" placeholder="Empresa / Organización" data-es-placeholder="Empresa / Organización" data-en-placeholder="Company / Organization" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre los prompts o modelos que deseas optimizar..." data-es-placeholder="Cuéntanos sobre los prompts o modelos que deseas optimizar..." data-en-placeholder="Tell us about the prompts or models you wish to optimize..." required></textarea>
+                    </div>
+                    <div class="buttons-group">
+                        <button type="button" id="btn-whatsapp" class="btn-primary btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</span>
+                        </button>
+                        <button type="button" id="btn-email" class="btn-primary btn-email">
+                            <i class="fa-solid fa-envelope"></i> <span data-es="Enviar por Correo" data-en="Send via Email">Enviar por Correo</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="contacto" id="footer-info">
+            <div class="footer-container">
+                <h3 class="footer-title" data-es="Contacto Directo" data-en="Direct Contact">Contacto Directo</h3>
+
+                <div class="contacto-info-grid">
+                    <div class="contacto-linea">
+                        <p><strong data-es="Correo: " data-en="Email: ">Correo: </strong></p>
+                        <a href="mailto:neuralsynthetix@gmail.com">neuralsynthetix@gmail.com</a>
+                    </div>
+                    <div class="contacto-linea">
+                        <p><strong data-es="Teléfono: " data-en="Phone: ">Teléfono: </strong></p>
+                        <a href="https://wa.me/584268467458" target="_blank" rel="noopener noreferrer">+58 426 8467 458</a>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="redes-contacto">
+                    <a href="https://github.com/MariandryG" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/git.png" alt="GitHub"> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/neuralsynthetix/?hl=es" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/instagram.png" alt="Instagram"> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariandry-garcia-76b708344/" target="_blank" rel="noopener noreferrer" class="icono-contacto">
+                        <img src="./img/linkedin.png" alt="LinkedIn"> LinkedIn
+                    </a>
+                </div>
+                <div class="footer-credits">
+                    <p>&copy; 2026 NeuralSynthetix. All rights reserved. &lt;AD/MG&gt;</p>
+                </div>
+            </div>
+        </footer>
 
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
